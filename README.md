@@ -26,6 +26,8 @@ https://github.com/facebookresearch/faiss/issues/2890
 conda install mkl=2021
 ```
 
+[Faiss-Official-INSTALL-Doc](https://github.com/facebookresearch/faiss/blob/main/INSTALL.md)
+
 2. C++
 
 

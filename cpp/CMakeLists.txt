@@ -17,6 +17,6 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # Naming the executable
 set(EXECUTABLE_NAME "faiss-cpp")
 
-add_executable(${EXECUTABLE_NAME} ${CMAKE_CURRENT_SOURCE_DIR}/2_indexFlatIP.cpp)
+add_executable(${EXECUTABLE_NAME} ${CMAKE_CURRENT_SOURCE_DIR}/3_write_and_read_index.cpp)
 
 target_link_libraries(${EXECUTABLE_NAME} PRIVATE faiss)

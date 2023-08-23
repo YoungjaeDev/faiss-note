@@ -118,5 +118,10 @@ int main() {
         }
     }
 
+    delete[] xb;
+    delete[] xq;
+    delete[] D;
+    delete[] I;
+    
     return 0;
 }

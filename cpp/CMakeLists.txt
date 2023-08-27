@@ -17,6 +17,11 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # Naming the executable
 set(EXECUTABLE_NAME "faiss-cpp")
 
-add_executable(${EXECUTABLE_NAME} ${CMAKE_CURRENT_SOURCE_DIR}/3_write_and_read_index.cpp)
+# Find_CUDA
+find_package(CUDA REQUIRED)
 
-target_link_libraries(${EXECUTABLE_NAME} PRIVATE faiss)
+include_directories(${CUDA_TOOLKIT_ROOT_DIR}/targets/${CMAKE_HOST_SYSTEM_PROCESSOR}-linux/include)
+
+add_executable(${EXECUTABLE_NAME} ${CMAKE_CURRENT_SOURCE_DIR}/4_gpu.cpp)
+
+target_link_libraries(${EXECUTABLE_NAME} PRIVATE faiss )

@@ -15,7 +15,7 @@ res = faiss.StandardGpuResources()  # Initialize GPU resources
 vectors = np.array([[1, 2], [3, 4], [5, 6], [7, 8], [9, 10], [11, 12]], dtype=np.float32)
 ids = np.array([10, 20, 30, 10, 20, 30], dtype=np.int64)
 
-index_base = faiss.IndexFlatL2(vectors.shape[1])
+index_base = faiss.IndexFlatIP(vectors.shape[1])
 
 # 3. Move the index to GPU
 gpu_index = faiss.index_cpu_to_gpu(res, 0, index_base) # make it a GPU index. 0 is the GPU id

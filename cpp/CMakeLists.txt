@@ -22,6 +22,8 @@ find_package(CUDA REQUIRED)
 
 include_directories(${CUDA_TOOLKIT_ROOT_DIR}/targets/${CMAKE_HOST_SYSTEM_PROCESSOR}-linux/include)
 
-add_executable(${EXECUTABLE_NAME} ${CMAKE_CURRENT_SOURCE_DIR}/4_gpu.cpp)
+add_executable(${EXECUTABLE_NAME} ${CMAKE_CURRENT_SOURCE_DIR}/5_gpu_load_test.cpp)
 
 target_link_libraries(${EXECUTABLE_NAME} PRIVATE faiss )
+
+install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/index.faiss DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
